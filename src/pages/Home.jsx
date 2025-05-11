@@ -6,6 +6,8 @@ import { Container } from '@mui/material'
 import ImageCarousel from '../components/ImageCarousel.jsx'
 import Servicios from '../components/Servicios.jsx'
 import Contacto from '../components/Contacto.jsx'
+import Comentarios from '../components/Comentarios'
+
 
 
 
@@ -16,6 +18,7 @@ function Home() {
     <ImageCarousel />
     <Container>
       <Servicios />
+      <Comentarios />
       <Contacto />
       <Footer />
     </Container>
