@@ -16,38 +16,38 @@ const estiloModal = {
 
 const styleInput = {
     '& input:-webkit-autofill': {
-    WebkitBoxShadow: '0 0 0 1000px transparent inset',
-    WebkitTextFillColor: '#1595a1',
-    transition: 'background-color 5000s ease-in-out 0s',
+        WebkitBoxShadow: '0 0 0 1000px transparent inset',
+        WebkitTextFillColor: '#1595a1',
+        transition: 'background-color 5000s ease-in-out 0s',
     },
     '& .MuiInputLabel-root': {
-    color: '#1595a1',
+        color: '#1595a1',
     },
     '& .MuiInputLabel-root.Mui-focused': {
-    color: '#fff',
+        color: '#fff',
     },
     '& .MuiOutlinedInput-root': {
-      borderRadius: '4px',
-      color: '#1595a1',
-      '& fieldset': {
-        borderColor: '#1595a1',
-      },
-      '&:hover fieldset': {
-        borderColor: '#08d6e9',
-      },
-      '&.Mui-focused fieldset': {
-        borderColor: '#1595a1',
-      },
-      '& input::placeholder': {
+        borderRadius: '4px',
         color: '#1595a1',
-        opacity: 1,
-      },
+        '& fieldset': {
+            borderColor: '#1595a1',
+        },
+        '&:hover fieldset': {
+            borderColor: '#08d6e9',
+        },
+        '&.Mui-focused fieldset': {
+            borderColor: '#1595a1',
+        },
+        '& input::placeholder': {
+            color: '#1595a1',
+            opacity: 1,
+        },
     },
     input: {
-      color: '#1595a1',
+        color: '#1595a1',
     },
-    mb: 2
-}
+    mb: 2,
+};
 
 export default function ComentariosConModal() {
   const [nombre, setNombre] = useState('')
@@ -112,15 +112,14 @@ export default function ComentariosConModal() {
         </Box>
       </Modal>
 
-      {/* Lista de comentarios */}
       {listaComentarios.map((coment) => (
         <Card key={coment.id} sx={{ mb: 2 }}>
           <CardContent sx={{ display: 'flex', justifyContent: 'space-between', backgroundColor: '#1595a1' }}>
             <Box>
-              <Typography sx={{fontSize: '18px', fontWeight: 700}} variant="subtitle1">{coment.nombre}</Typography>
+              <Typography sx={{fontSize: '18px', fontWeight: 700, textAlign: 'left'}} variant="subtitle1">{coment.nombre}</Typography>
               <Typography sx={{fontStyle: 'italic'}} variant="body2">{coment.texto}</Typography>
             </Box>
-            <IconButton onClick={() => eliminarComentario(coment.id)}>
+            <IconButton onClick={() => eliminarComentario(coment.id)} sx={{ textAlign: 'right'}} >
               <DeleteIcon />
             </IconButton>
           </CardContent>
